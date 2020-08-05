@@ -1,0 +1,11 @@
+{
+    "files": {
+        "README.md": "7f77687b99f8fb20b51f227d615373ac69e045d3398a87b275b23bbb74324362",
+        "index.js": "8d03f2e408fa886a6a294e918117abbe1a1795a3031d084ef4e2cb4a7d8e13d8",
+        "module.json": "cb349f23c2dece2ce0b657b972bebe806f4157be70564b9343446ee7486c560b"
+    },
+    "defs": {
+        "S_SHOW_AWESOMIUMWEB_SHOP": 1,
+        "S_USER_PAPERDOLL_INFO": 11
+    }
+}
