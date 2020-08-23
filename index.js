@@ -21,8 +21,8 @@ module.exports = function gourd(mod) {
 	});
 
 	mod.game.on('enter_game', () => {
-        userName = mod.game.me.name;
-    });
+		userName = mod.game.me.name;
+	});
 
 	mod.hook('S_USER_PAPERDOLL_INFO', 11, async event => {
 		if (enabled && event.name != userName) await Open(event.name);
