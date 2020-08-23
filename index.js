@@ -18,7 +18,7 @@ module.exports = function gourd(mod) {
 	mod.command.add(['mongord', 'mg'], () => {
 		enabled = !enabled;
 		mod.command.message(`mongord enabled: ${enabled}`);
-	})
+	});
 
 	mod.game.on('enter_game', () => {
         userName = mod.game.me.name;
@@ -26,7 +26,7 @@ module.exports = function gourd(mod) {
 
 	mod.hook('S_USER_PAPERDOLL_INFO', 11, async event => {
 		if (enabled && event.name != userName) await Open(event.name);
-	})
+	});
 
 	function Open(name) {
 		const uri = `https://kabedon.moongourd.com${region}search/${name}`;
@@ -38,5 +38,5 @@ module.exports = function gourd(mod) {
 		} catch (e) {
 			console.log(e);
 		}
-	}
+	};
 }
