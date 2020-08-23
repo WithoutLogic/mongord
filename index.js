@@ -5,27 +5,27 @@ module.exports = function gourd(mod) {
 
 	switch (region) {
 		case "eme":
-			region = "/"
+			region = "/";
 			break;
 		case "gf":
-			region = "/eu/"
+			region = "/eu/";
 			break;
 		default:
-			mod.warn("This region is not supported.")
+			mod.warn("This region is not supported.");
 			break;
 	}
 
 	mod.command.add(['mongord', 'mg'], () => {
-		enabled = !enabled
-		mod.command.message(`mongord enabled: ${enabled}`)
+		enabled = !enabled;
+		mod.command.message(`mongord enabled: ${enabled}`);
 	})
 
 	mod.game.on('enter_game', () => {
-        	userName = mod.game.me.name
-    	});
+        userName = mod.game.me.name;
+    });
 
 	mod.hook('S_USER_PAPERDOLL_INFO', 11, async event => {
-		if (enabled && event.name != userName) await Open(event.name)
+		if (enabled && event.name != userName) await Open(event.name);
 	})
 
 	function Open(name) {
