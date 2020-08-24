@@ -12,7 +12,7 @@ module.exports = function gourd(mod) {
 			break;
 		default:
 			mod.warn("This region is not supported.");
-			break;
+			return;
 	}
 
 	mod.command.add(['mongord', 'mg'], () => {
